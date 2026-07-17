@@ -127,7 +127,7 @@ function LayoutWrapper({ children }: { children: JSX.Element }) {
         if (role === 1) {
           const response = await rcRequestStudent.getAll(token);
           const rc = response.filter(
-            (item: any) => item.ID === parseInt(rcid.toString(), 10)
+            (item: any) => item.ID === parseInt(rcid.toString(), 10),
           )[0];
           const name = `${rc.type} ${rc.academic_year} ${rc.phase} `;
           setRcName(name);
@@ -135,7 +135,7 @@ function LayoutWrapper({ children }: { children: JSX.Element }) {
         } else if (role === 2) {
           const response = await rcRequestCompany.getAll(token);
           const rc = response.filter(
-            (item: any) => item.id === parseInt(rcid.toString(), 10)
+            (item: any) => item.id === parseInt(rcid.toString(), 10),
           )[0];
           const name = `${rc.name} `;
           setRcName(name);
@@ -148,7 +148,7 @@ function LayoutWrapper({ children }: { children: JSX.Element }) {
         ) {
           const response = await rcRequestAdmin.getAll(token);
           const rc = response.filter(
-            (item: any) => item.ID === parseInt(rcid.toString(), 10)
+            (item: any) => item.ID === parseInt(rcid.toString(), 10),
           )[0];
           const name = `${rc.type} ${rc.academic_year} ${rc.phase} `;
           setRcName(name);
