@@ -428,7 +428,7 @@ function LayoutWrapper({ children }: { children: JSX.Element }) {
           name: "Master Database (Student)",
           id: "/student",
         },
-        // conditional rendering
+        // conditional rendering check
         role === 100 || role === 101
           ? {
               avatar: <BarChartIcon />,
